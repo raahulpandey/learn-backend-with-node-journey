@@ -23,4 +23,15 @@ I will update it **daily** with notes, code examples, and progress.
     - `readFileSync`, `writeFileSync` (synchronous methods).
     - `readFile`, `writeFile` (asynchronous methods with callbacks).
   - `http` → created a basic web server with different routes (`/`, `/about`, etc.).
-- Understood difference between **synchronous vs asynchronous** file operations.
+- Understood difference between **synchronous vs asynchronous** file operations.  
+
+### Day 3 (Sep 8, 2025)
+- Learned about **npm (Node Package Manager)**:
+  - How to download and install npm packages.
+  - How to import and use packages in Node.js projects.
+  - Difference between local vs global packages.
+- Installed and used **nodemon** globally to auto-restart the server.
+- Studied the **Event Loop** in Node.js:
+  - How Node.js handles asynchronous operations.
+  - Difference between **synchronous** and **asynchronous** execution.
+- Ran small experiments on localhost to see how **sync code blocks execution** but **async code runs without blocking**.
