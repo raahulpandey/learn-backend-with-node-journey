@@ -35,3 +35,22 @@ I will update it **daily** with notes, code examples, and progress.
   - How Node.js handles asynchronous operations.
   - Difference between **synchronous** and **asynchronous** execution.
 - Ran small experiments on localhost to see how **sync code blocks execution** but **async code runs without blocking**.
+
+Day 4 – Sep 9, 2025
+Learned about Promises in Node.js:
+How to convert callback-based functions to promises using new Promise().
+How resolve and reject work.
+Practiced chaining .then() and handling errors with .catch().
+Explored async/await syntax:
+Made asynchronous code look synchronous.
+Used try/catch for error handling with async functions.
+Practiced reading multiple files asynchronously using:
+fs.readFile with callbacks.
+Promisified fs.readFile using util.promisify.
+Learned about EventEmitter:
+Created custom events with .on() and .emit().
+Understood event-driven programming in Node.js.
+Experimented with combining async/await and EventEmitter to manage asynchronous events.
+Reviewed file path management:
+Ensured correct relative paths when reading files.
+Used 'utf8' encoding to read text files as strings instead of buffers.
