@@ -1,88 +1,23 @@
-Node.js Learning Log
-Day 1 – Sep 6, 2025
+🚀 Node.js Learning Log (Sep 6–9, 2025)
+Day	Date	Topics Covered	Status
+1	Sep 6	Installed Node.js; Node vs Browser JS 🌐; Global objects (__dirname, __filename, require, process) 🛠; module.exports 🔗	✅ Done
+2	Sep 7	Core modules: os, path, fs (sync & async), http; Synchronous vs asynchronous ⏱	✅ Done
+3	Sep 8	npm basics 📦 (install/use packages, local vs global); nodemon; Event Loop 🔄	✅ Done
+4	Sep 9	Promises 💡 (resolve/reject, .then/.catch); async/await ⚡; Reading multiple files 📂; EventEmitter 🎯; Path management 🔍	✅ Done
+✅ Key Notes (Compact Version)
 
-Installed Node.js and set up the environment.
+Node vs Browser: Node runs JS on server, browser on client 🌐
 
-Learned the difference between Node.js and Browser JavaScript:
+Global Objects: __dirname, __filename, process 🛠
 
-Browser runs JS in the client (limited to DOM, window, etc.).
+FS Module: readFileSync/writeFileSync vs readFile/writeFile ⏱
 
-Node.js runs JS on the server (no DOM, has modules like fs, http).
+Event Loop: Async code does not block sync code 🔄
 
-Explored Global Objects in Node.js: __dirname, __filename, require, process.
+npm: Install packages locally/globally 📦; nodemon auto-restarts server
 
-Practiced using module.exports to share functions and variables across files.
+Promises & Async/Await: Convert callbacks → promises; await looks synchronous ⚡
 
-Day 2 – Sep 7, 2025
+EventEmitter: .on() listens, .emit() triggers 🎯
 
-Learned about Core Node.js Modules:
-
-os → system info (uptime, user info, memory).
-
-path → file path utilities (basename, dirname, join, resolve).
-
-fs → File system module:
-
-Synchronous methods: readFileSync, writeFileSync.
-
-Asynchronous methods with callbacks: readFile, writeFile.
-
-http → created a basic web server with different routes (/, /about, etc.).
-
-Understood the difference between synchronous vs asynchronous file operations.
-
-Day 3 – Sep 8, 2025
-
-Learned about npm (Node Package Manager):
-
-How to download and install npm packages.
-
-How to import and use packages in Node.js projects.
-
-Difference between local vs global packages.
-
-Installed and used nodemon globally to auto-restart the server.
-
-Studied the Event Loop in Node.js:
-
-How Node.js handles asynchronous operations.
-
-Difference between synchronous and asynchronous execution.
-
-Ran small experiments on localhost to see how sync code blocks execution but async code runs without blocking.
-
-Day 4 – Sep 9, 2025
-
-Learned about Promises in Node.js:
-
-How to convert callback-based functions to promises using new Promise().
-
-How resolve and reject work.
-
-Practiced chaining .then() and handling errors with .catch().
-
-Explored async/await syntax:
-
-Made asynchronous code look synchronous.
-
-Used try/catch for error handling with async functions.
-
-Practiced reading multiple files asynchronously using:
-
-fs.readFile with callbacks.
-
-Promisified fs.readFile using util.promisify.
-
-Learned about EventEmitter:
-
-Created custom events with .on() and .emit().
-
-Understood event-driven programming in Node.js.
-
-Experimented with combining async/await and EventEmitter to manage asynchronous events.
-
-Reviewed file path management:
-
-Ensured correct relative paths when reading files.
-
-Used 'utf8' encoding to read text files as strings instead of buffers.
+File Paths: Use ./ and 'utf8' to read text files correctly 🔍
