@@ -4,7 +4,6 @@
   "description": "This repository is my personal learning journey of **Backend Development** using **Node.js**.  \r I will update it **daily** with notes, code examples, and progress.",
   "main": "10-module-async.js",
   "scripts": {
-
     "start": "nodemon app.js"
   },
   "repository": {
@@ -19,6 +18,7 @@
   "homepage": "https://github.com/raahulpandey/learn-backend-with-node-journey#readme",
   "dependencies": {
     "bootstrap": "^5.3.8",
+    "express": "^5.1.0",
     "lodash": "^4.17.21"
   },
   "devDependencies": {

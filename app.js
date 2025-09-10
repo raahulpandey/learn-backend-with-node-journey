@@ -1,13 +1,22 @@
 const http = require('http')
-var fs= require('fs')
-http.createServer(function(req,res) {
-    //const text =fs.readFileSync('./content/big.txt','utf8')
-    const text = fs.createReadStream('./content/big.txt','utf8')
-    text.on('open',() =>{
-    text.pipe(res)
-    })
-    text.on('error',(err) => {
-        res.end(err)
-    })
+const {readFileSync}=require('fs');
+const hompage = readFileSync('./content/navbar app/index.html')
+const server = http.createServer((req,res)=> {
+    const url=req.url;
+    if(url === '/') { 
+        res.writeHead(200,{'content-type' : 'text/html'}) // here you have compulsory to give the text type or content type in node.js
+        res.write(hompage);
+        res.end()
+    }
+    else if (url === '/about') {
+         res.writeHead(200,{'content-type' : 'text/html'}) 
+        res.write('<h1>about page</h1>');
+        res.end()
+    }else {
+         res.writeHead(404,{'content-type' : 'text/html'}) 
+        res.write('<h1>page not found</h1>');
+        res.end()
+    }
 })
-.listen(5000)
+server.listen(5000)
+ 
