@@ -29,6 +29,20 @@ app.get('/api/products/:productID/reviews/:reviewsID' , (req,res) => {
     console.log(req.params);
     res.send("hello world")
 })
+app.get('/api/v1/query',(req,res)=> {
+    const {search,limit} = req.query;
+     
+    let sortedproduct = [...products]
+    if(search) {
+        sortedproduct=sortedproduct.filter((product) =>{
+            return product.name.startsWith(search)
+        })
+    }
+    if(limit) {
+        sortedproduct=sortedproduct.slice(0,Number(limit))
+    }
+    res.status(200).json(sortedproduct)
+})
 
 
 app.listen(5000,() => {

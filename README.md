@@ -10,78 +10,84 @@
 | 6   | Sep 11 | HTTP Content-Type (`text/html`, `application/json`) 📑; Why we need **Express.js** 🚀; Different HTTP Status Codes (200, 201, 400, 404, 500) with examples ✅                  | ✅ Done  |
 | 7   | Sep 12 | Basics of Express.js routing 🚦 (`app.get`, `app.all`); Sending responses with status codes (200, 404); Serving static files using `express.static`; Sending HTML with `res.sendFile` 📂 | ✅ Done  |
 | 8   | Sep 13 | Sending JSON data with Express (`res.json`) 🔗; Dynamic routing with URL params (`req.params`) ✨; Building simple APIs for `/api/products` and `/api/products/:id`; Nested routes (`/reviews/:id`) 🛒 | ✅ Done  |
+| 9   | Sep 17 | Express Middleware 🛡️ (`app.use`, custom middleware functions); Order of middleware execution; Applying middleware globally vs route-level; Query parameters (`req.query`) for filtering/searching APIs 🔍 | ✅ Done  |
 
 ---
 
-# 📝 Key Notes (Day 1 → Day 8)
+# 📝 Key Concepts (Day 1 → Day 9)
 
-### Day 1: Node.js Basics
-- **Node vs Browser JS**:  
-  - Browser → Client-side (DOM, window).  
-  - Node.js → Server-side (no DOM, has fs, path, http).  
-- **Global Objects**: `__dirname`, `__filename`, `process`, `require`.  
-- **module.exports** → Share functions/objects between files.  
+### Day 1 – Node.js Basics
+- Node.js runs JS outside browser (server-side).
+- Global Objects: `__dirname`, `__filename`, `process`, `require`.
+- `module.exports` → export functions/objects across files.
 
 ---
 
-### Day 2: Core Modules
-- **OS Module** → System info (`os.userInfo()`, `os.uptime()`).  
-- **Path Module** → Work with file paths (`path.join`, `path.resolve`).  
-- **FS Module** → Sync vs Async file operations (`fs.readFileSync`, `fs.readFile`).  
-- **HTTP Module** → Create servers (`http.createServer`).  
-- **Sync vs Async**: Async is non-blocking.  
+### Day 2 – Core Modules
+- **OS** → System info (`os.userInfo()`).
+- **Path** → File paths (`path.join`, `path.resolve`).
+- **FS** → File operations (`readFileSync`, `readFile`).
+- **HTTP** → Create servers (`http.createServer`).
+- **Sync vs Async** → Async = non-blocking.
 
 ---
 
-### Day 3: npm & Event Loop
-- **npm** → Install packages locally/globally.  
-- **nodemon** → Auto-restarts server on file changes.  
-- **Event Loop** → Manages async callbacks (non-blocking).  
+### Day 3 – npm & Event Loop
+- **npm** → Package manager.
+- **nodemon** → Auto restart server.
+- **Event Loop** → Handles async tasks (callbacks, promises).
 
 ---
 
-### Day 4: Async Programming
-- **Promises** → Handle async (`.then`, `.catch`).  
-- **async/await** → Cleaner async code (await resolves promise).  
-- **EventEmitter** → `.on()` = listen, `.emit()` = trigger events.  
-- **Path module** → Manage file paths.  
+### Day 4 – Async Programming
+- **Promises** → `.then` & `.catch`.
+- **async/await** → Cleaner async handling.
+- **EventEmitter** → `.on()` listen, `.emit()` trigger.
 
 ---
 
-### Day 5: Streams & HTTP
-- **Streams** → Handle large data in chunks (`createReadStream`).  
-- **Backpressure** → Manage fast producers vs slow consumers.  
-- **HTTP Request-Response Cycle** 🌐:  
-  - Client sends request → Server processes → Sends response.  
-- **Status Codes**:  
-  - `200 OK` = Success  
-  - `201 Created`  
-  - `400 Bad Request`  
-  - `404 Not Found`  
-  - `500 Server Error`  
+### Day 5 – Streams & HTTP
+- **Streams** → Process data in chunks (`createReadStream`).
+- **Backpressure** → Balance producer vs consumer.
+- **HTTP Cycle** → Request → Server → Response.
+- **Status Codes**: `200 OK`, `201 Created`, `400 Bad Request`, `404 Not Found`, `500 Server Error`.
 
 ---
 
-### Day 6: Express Intro
-- **Content-Type** → `text/html`, `application/json`.  
-- **Why Express** → Simplifies Node’s `http` module (routing, middleware).  
-- **HTTP Status Codes in Express** → `res.status(200).send("OK")`.  
+### Day 6 – Express Intro
+- **Content-Type** → `text/html`, `application/json`.
+- Why Express? → Easier than Node `http`.
+- Status codes in Express → `res.status(200).send("OK")`.
 
 ---
 
-### Day 7: Express Routing & Static Files
-- **Routing**: `app.get`, `app.all` (catch all routes).  
-- **Status Codes** → Send different responses with `.status()`.  
-- **Static Middleware** → `express.static` to serve static files.  
-- **res.sendFile** → Serve HTML files.  
+### Day 7 – Express Routing & Static Files
+- **Routing** → `app.get`, `app.all`.
+- **Static Middleware** → `express.static('public')`.
+- **res.sendFile** → Send HTML files.
 
 ---
 
-### Day 8: Express APIs
-- **res.json** → Send JSON response.  
-- **req.params** → Access URL parameters (e.g. `/products/:id`).  
-- **APIs**:  
-  - `/api/products` → return list.  
-  - `/api/products/:id` → return single product.  
-  - Nested route → `/api/products/:id/reviews/:reviewId`.  
+### Day 8 – Express APIs
+- **res.json** → Send JSON response.
+- **req.params** → Get URL parameters.
+- APIs:
+  - `/api/products` → list products.
+  - `/api/products/:id` → single product.
+  - Nested routes `/api/products/:id/reviews/:reviewId`.
 
+---
+
+### Day 9 – Middleware & Query Params
+- **Middleware** → Functions between req → res.
+  - Types: Application-level, Route-level, Built-in, Third-party.
+  - Example:  
+    ```js
+    app.use([authorize, logger])
+    ```
+- **app.use('/api', logger)** → Run only for `/api/*` routes.
+- **Order matters** → Middleware executes top → bottom.
+- **req.query** → Get query params.  
+  Example: `/api/v1/query?search=phone&limit=2`
+
+---
