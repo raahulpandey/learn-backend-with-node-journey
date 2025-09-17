@@ -1,10 +1,12 @@
 const express = require('express') ;
 const app= express()
+const morgan = require('morgan')
 const loger = require('./logger')
 const authorize = require('./authorize')
 // req => middleware => res
 //app.use('/api',loger) if you write this in all the api starting url dosent require to write loger in every get function
-app.use([authorize,loger])
+//app.use([authorize,loger])
+app.use(morgan('tiny'))
 app.get('/',(req,res) => {
     res.send('Home')
 })
