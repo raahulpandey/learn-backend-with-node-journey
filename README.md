@@ -1,4 +1,4 @@
-# 🚀 Node.js + Express.js Learning Log (Day 1 → Day 10)
+# 🚀 Node.js + Express.js Learning Log (Day 1 → Day 11)
 
 | Day | Date   | Topics Covered                                                                                                                                                               | Status   |
 | --- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
@@ -12,10 +12,11 @@
 | 8   | Sep 13 | Sending JSON data with Express (`res.json`) 🔗; Dynamic routing with URL params (`req.params`) ✨; Building simple APIs for `/api/products` and `/api/products/:id`; Nested routes (`/reviews/:id`) 🛒 | ✅ Done  |
 | 9   | Sep 17 | Express Middleware 🛡️ (`app.use`, custom middleware functions); Order of middleware execution; Applying middleware globally vs route-level; Query parameters (`req.query`) for filtering/searching APIs 🔍 | ✅ Done  |
 | 10  | Sep 18 | Working with external `data.js` (products & people arrays) 📦; Serving JSON via `/api/people`; Third-party middleware `morgan` for request logging 📜; Combining custom + built-in + third-party middleware in Express ⚡ | ✅ Done  |
+| 11  | Sep 19 | Revision of all topics (Day 1 → 10) 🔄; Reinforced Node.js basics, Express routing, APIs, middleware, query params, JSON data, and third-party middleware usage 📝 | ✅ Done  |
 
 ---
 
-# 📝 Key Concepts (Day 1 → Day 10)
+# 📝 Key Concepts (Day 1 → Day 11)
 
 ### Day 1 – Node Basics
 - Node vs Browser JS  
@@ -71,3 +72,9 @@
 - Serving `/api/people` route  
 - Third-party middleware (`morgan`)  
 - Types of middleware: built-in, custom, third-party
+
+### Day 11 – Revision
+- Reviewed **all topics Day 1 → 10**  
+- Reinforced: Node basics, core modules, async & promises, HTTP & status codes  
+- Express routing & APIs, middleware usage (custom & third-party), query params, JSON handling  
+- Practiced integrating multiple concepts in a small project
