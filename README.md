@@ -100,21 +100,4 @@
 
 ---
 
-# 📸 Postman Screenshots
-
-### 1. GET `/api/people`
-Fetch all people from API:  
-![GET /api/people](./screenshots/get-people.png)
-
----
-
-### 2. POST `/api/people`
-Send `{ "name": "Rahul" }` in body → Creates new person:  
-![POST /api/people](./screenshots/post-people.png)
-
----
-
-### 3. POST `/login`
-Login with name in body → Returns welcome message:  
-![POST /login](./screenshots/post-login.png)
 
