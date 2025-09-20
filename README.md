@@ -1,4 +1,4 @@
-# 🚀 Node.js + Express.js Learning Log (Day 1 → Day 11)
+# 🚀 Node.js + Express.js Learning Log (Day 1 → Day 12)
 
 | Day | Date   | Topics Covered                                                                                                                                                               | Status   |
 | --- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
@@ -13,10 +13,12 @@
 | 9   | Sep 17 | Express Middleware 🛡️ (`app.use`, custom middleware functions); Order of middleware execution; Applying middleware globally vs route-level; Query parameters (`req.query`) for filtering/searching APIs 🔍 | ✅ Done  |
 | 10  | Sep 18 | Working with external `data.js` (products & people arrays) 📦; Serving JSON via `/api/people`; Third-party middleware `morgan` for request logging 📜; Combining custom + built-in + third-party middleware in Express ⚡ | ✅ Done  |
 | 11  | Sep 19 | Revision of all topics (Day 1 → 10) 🔄; Reinforced Node.js basics, Express routing, APIs, middleware, query params, JSON data, and third-party middleware usage 📝 | ✅ Done  |
+| 12  | Sep 20 | Learned **Postman** 🛠 (testing APIs); Practiced GET & POST requests with Postman; Used `express.json()` & `express.urlencoded()` middleware; Built simple `/api/people` GET/POST APIs and `/login` POST route with validations ✅ | ✅ Done  |
+
 
 ---
 
-# 📝 Key Concepts (Day 1 → Day 11)
+# 📝 Key Concepts (Day 1 → Day 12)
 
 ### Day 1 – Node Basics
 - Node vs Browser JS  
@@ -78,3 +80,41 @@
 - Reinforced: Node basics, core modules, async & promises, HTTP & status codes  
 - Express routing & APIs, middleware usage (custom & third-party), query params, JSON handling  
 - Practiced integrating multiple concepts in a small project
+
+
+
+
+### Day 12 – Postman & POST Requests
+- **Postman** → API testing tool (no browser needed).  
+- `express.json()` → Parses incoming JSON data in `req.body`.  
+- `express.urlencoded({ extended: false })` → Parses form data from HTML forms.  
+- Built `/api/people`:
+  - **GET** → returns people array as JSON.  
+  - **POST** → accepts `{name: "xyz"}` in body, validates, returns success/failure.  
+- Built `/login` route:
+  - **POST** with body `{ name: "Rahul" }`.  
+  - If valid → returns `welcome Rahul`.  
+  - Else → returns `401 please provide valid credentials`.  
+
+✅ Practiced GET/POST in Postman, understood request body, validation, and responses.  
+
+---
+
+# 📸 Postman Screenshots
+
+### 1. GET `/api/people`
+Fetch all people from API:  
+![GET /api/people](./screenshots/get-people.png)
+
+---
+
+### 2. POST `/api/people`
+Send `{ "name": "Rahul" }` in body → Creates new person:  
+![POST /api/people](./screenshots/post-people.png)
+
+---
+
+### 3. POST `/login`
+Login with name in body → Returns welcome message:  
+![POST /login](./screenshots/post-login.png)
+
